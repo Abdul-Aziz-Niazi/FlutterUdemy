@@ -1,3 +1,5 @@
+import 'package:bmi_calculator/calculator_brain.dart';
+import 'package:bmi_calculator/results_page.dart';
 import 'package:bmi_calculator/reusable_card.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -98,8 +100,8 @@ class _InputPageState extends State<InputPage> {
                               activeTrackColor: Colors.white,
                               thumbColor: Color(0xFFEB1555),
                               inactiveTrackColor: Color(0xFF8D8E98),
-                              thumbShape:
-                                  RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                              thumbShape: RoundSliderThumbShape(
+                                  enabledThumbRadius: 15.0),
                               overlayShape:
                                   RoundSliderOverlayShape(overlayRadius: 30.0)),
                           child: Slider(
@@ -195,14 +197,44 @@ class _InputPageState extends State<InputPage> {
                 ],
               ),
             ),
-            Container(
-              color: kBottomBarColor,
-              height: kBottomBarHeight,
-              width: double.infinity,
-              margin: EdgeInsets.only(top: 15.0),
-            )
+            BottomButton(
+                onTap: () {
+                  var calc = CalculatorBrain(height: height, weight: weight);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ResultsPage(
+                        bmiResult: calc.calculateBMI(),
+                        interPretation: calc.getInterpretation(),
+                        resultText: calc.getResult(),
+                      ),
+                    ),
+                  );
+                },
+                buttonTitle: "CALCULATE")
           ],
         ));
+  }
+}
+
+class BottomButton extends StatelessWidget {
+  BottomButton({this.onTap, this.buttonTitle});
+
+  final Function onTap;
+  final String buttonTitle;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        child: Center(child: Text(buttonTitle, style: kLargeButtonTextStyle)),
+        color: kBottomBarColor,
+        height: kBottomBarHeight,
+        width: double.infinity,
+        margin: EdgeInsets.only(top: 15.0),
+      ),
+    );
   }
 }
 

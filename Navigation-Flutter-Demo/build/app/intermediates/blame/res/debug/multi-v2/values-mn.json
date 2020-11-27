@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/abdulaziz/Documents/FlutterUdemy/Navigation-Flutter-Demo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-mn/values-mn.xml",
+            "outputFile": "C:\\Projects\\Android\\Flutter_UDEMY\\Navigation-Flutter-Demo\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mn\\values-mn.xml",
             "map": [
                 {
-                    "source": "/Users/abdulaziz/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/9f3d43accca378b31433eebc90a29b5a/res/values-mn/values-mn.xml",
+                    "source": "C:\\Users\\niazi\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.1.0.aar\\f4aef9089efef399cab3a28e303dd05d\\res\\values-mn\\values-mn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/abdulaziz/Documents/FlutterUdemy/bmi-calculator-flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml",
+            "outputFile": "C:\\Projects\\Android\\Flutter_UDEMY\\bmi-calculator-flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
             "map": [
                 {
-                    "source": "/Users/abdulaziz/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/res/values-be/values-be.xml",
+                    "source": "C:\\Users\\niazi\\.gradle\\caches\\transforms-2\\files-2.1\\e9dab9c67c1ee3668e0bbf86c6d8cbd8\\core-1.1.0\\res\\values-be\\values-be.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
